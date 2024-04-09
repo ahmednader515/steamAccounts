@@ -1,0 +1,330 @@
+/* Start Global */
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #040D12 !important;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none !important;
+    color: white !important;
+}
+
+.text {
+    color: white;
+    width: 100%;
+    margin: 100px auto;
+    text-align: center;
+}
+
+/* End Global */
+
+/* Start Header */
+.header {
+    padding: 20px;
+    background-color: #183D3D;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+}
+
+.header .logo {
+    color: white;
+}
+
+.header .links {
+    position: relative;
+}
+
+.header .links:hover .icon span:nth-child(2) {
+    width: 100%;
+}
+
+.header .links .icon {
+    width: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.header .links .icon span {
+    background-color: #eeeeee;
+    margin-bottom: 5px;
+    height: 2px;
+}
+
+.header .links .icon span:first-child {
+    height: 3px;
+    width: 100%;
+}
+
+.header .links .icon span:nth-child(2) {
+    width: 60%;
+    height: 3px;
+    transition: 0.3s;
+}
+
+.header .links .icon span:last-child {
+    width: 100%;
+    height: 3px;
+}
+
+.header .links ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background-color: #003C43;
+    position: absolute;
+    right: 0;
+    min-width: 200px;
+    top: calc(100% + 20px);
+    display: none;
+    z-index: 1;
+}
+
+.header .links ul::before {
+    content: "";
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent #003C43 transparent;
+    position: absolute;
+    right: 5px;
+    top: -20px;
+}
+
+.header .links:hover ul {
+    display: block;
+}
+
+.header .links ul li a {
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+    color: #eeeeee;
+    transition: 0.3s;
+}
+
+.header .links ul li a:hover {
+    padding-left: 25px;
+}
+
+.header .links ul li:not(:last-child) a {
+    border-bottom: 1px solid #DDD;
+}
+
+@media screen and (max-width: 600px) {
+
+    .header .container {
+        width: 90%;
+    }
+
+    .header h3 {
+        font-size: 15px;
+    }
+}
+
+/* End Header */
+
+/* Start Hero */
+
+.carousel-image {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.sale button {
+    border: 0;
+    background-color: #003C43;
+    color: white;
+    width: 50%;
+    margin: 25px auto;
+    border-radius: 5px;
+    padding: 10px 25px;
+    cursor: pointer;
+}
+
+#ovarlay {
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 100%;
+    height: 100vh;
+    z-index: 5;
+    position: absolute;
+    top: 0;
+}
+
+@media screen and (max-width: 600px) {
+    .carousel-image {
+        height: 50vh;
+    }
+}
+
+/* End Hero */
+
+/* Start Packs */
+
+.packs-section {
+    width: 80%;
+    background-color: #183D3D;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+    gap: 25px;
+    margin: 100px auto;
+    flex-wrap: wrap;
+}
+
+.packs-section .card {
+    width: 25%;
+    background-color: #135D66;
+    color: white;
+    text-align: right;
+    border-radius: 10px;
+}
+
+.packs-section .card:hover {
+    transform: translate(0, -5%);
+    transition: 0.2s;
+}
+
+.packs-section .card img {
+    width: 100%;
+    height: 200px;
+    border-radius: 10px 10px 0 0;
+}
+
+.packs-section .card .name {
+    padding: 25px 0 0 0;
+    width: 80%;
+}
+
+.packs-section .card .price {
+    width: 80%;
+}
+
+.packs-section .card button {
+    border: 0;
+    background-color: #003C43;
+    color: white;
+    width: 50%;
+    margin: 25px auto;
+    border-radius: 5px;
+    padding: 10px 25px;
+    cursor: pointer;
+}
+
+.packs-section .card a {
+    color: white;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 600px) {
+    .packs-section {
+        flex-direction: column;
+        padding: 25px;
+        gap: 50px;
+    }
+
+    .packs-section .card {
+        width: 100%;
+    }
+}
+
+/* End Packs */
+
+/* Start Packs */
+
+.accounts-section {
+    width: 80%;
+    background-color: #183D3D;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+    gap: 25px;
+    margin: 100px auto;
+    flex-wrap: wrap;
+}
+
+.accounts-section .card {
+    width: 25%;
+    background-color: #135D66;
+    color: white;
+    text-align: right;
+}
+
+.accounts-section .card:hover {
+    transform: translate(0, -5%);
+    transition: 0.2s;
+}
+
+.accounts-section .card img {
+    width: 100%;
+    height: 200px;
+}
+
+.accounts-section .card .name {
+    padding: 25px 0 0 0;
+    width: 80%;
+}
+
+.accounts-section .card .price {
+    width: 80%;
+}
+
+.accounts-section .card button {
+    border: 0;
+    background-color: #003C43;
+    color: white;
+    width: 50%;
+    margin: 25px auto;
+    border-radius: 5px;
+    padding: 10px 25px;
+    cursor: pointer;
+}
+
+.accounts-section .card a {
+    color: white;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 600px) {
+    .accounts-section {
+        flex-direction: column;
+        padding: 25px;
+        gap: 50px;
+    }
+
+    .accounts-section .card {
+        width: 100%;
+    }
+}
+
+/* End Packs */
+
+/* Start Footer */
+
+footer {
+    background-color: #183D3D;
+    color: white;
+    text-align: center;
+    padding: 25px 0;
+}
+
+/* End Footer */
